@@ -1,0 +1,81 @@
+To install Git, you can use the following command:
+
+dnf install git
+
+Next, let's create two directories:
+
+
+
+mkdir xxxxxx
+mkdir xxxxxx
+
+To configure your Git user and email for the repository, you can use the following commands. The --global flag allows you to use these settings across different projects, but you can omit it if you want to use specific or different settings for each project:
+
+
+
+git config --global user.name "XXXX"
+git config --global user.email "xxxx@xxx.xxx"
+
+Now, let's assign the necessary directory to the version control system using the following command. This command ensures that only changes to files within that directory are tracked:
+
+
+
+git init xxxxx (folder name or current directory) (if using the current directory, you can use) git init .
+
+You can check the .git folder to verify that all the files will be stored there. If this folder or directory is deleted, all the files within it will also be deleted:
+
+ll .git
+
+To check the status of the repository, you can use the command:
+
+
+
+git status
+
+Now, let's create some files in the directory that we want to keep under version control. Only those files within the designated directory will be tracked:
+
+
+
+touch file1
+touch file2
+
+Up to this point, we are moving to the working directory.
+
+Next, we'll move to the staging area. To move files from the working directory to the staging area, you can use the following command:
+
+
+
+git add xxxxxxx (file name) or git add . (to add the entire directory to the staging area)
+
+For example, to add the file named "file1" that we created earlier, you would use:
+
+
+
+git add file1
+
+You can use git status to check if the file has been added to the staging area.
+
+If you want to remove a file from the staging area, which means to stop tracking changes to that file, you can use the following command:
+
+
+
+git rm --cached xxxx (file name)
+
+If you have added only one file to the staging area but want to add another file, you need to use git add again for that file:
+
+
+
+git add xxxxx
+
+After adding files to the staging area, you can use git status to see which files are being tracked and which ones are not.
+
+Now, let's commit the changes made to the files in the working directory and provide information about what was done. We created the file in the working directory, added it to the staging area for tracking, and now we're committing it:
+
+
+
+git commit -m "file1 added"
+
+After -m, you need to provide a commit message describing the changes made to the file or code.
+
+Now, you can add some data to file1.
+
