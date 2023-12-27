@@ -1,0 +1,33 @@
+ERROR: Make sure you configure your 'user.name' and 'user.email' in git
+
+When encountering a Git error during a commit in any IDE, ensure that you have configured your 'user.name' and 'user.email' in Git. Follow the troubleshooting steps below:
+
+    Review the Error Message:
+    Click on the log accompanying the Git error message first to get more details.
+
+    Check Output Window in VS Code:
+    If you are using VS Code, locate the error message with read-only options in the 'output' window.
+
+    Copy Error Details to Notepad:
+    Copy both the 'user.email' and 'user.name' error messages and paste them into Notepad for reference.
+
+    Configure User Email:
+    Run the following command in the terminal:
+
+git config --global user.email "your_email@example.com"
+
+Replace "your_email@example.com" with your actual email address. If using VS Code, execute the command in the integrated terminal. If using WSL, run the command in the path where Git is configured.
+
+Configure User Name:
+Run the following command in the terminal:
+git config --global user.name "Your Name"
+
+Replace "Your Name" with your actual name. Git uses the username to identify the contributor, not for authentication.
+
+     
+
+Confirm Configuration:
+Ensure that there are no error messages after completing the above steps.
+
+Run Commit in IDE:
+Proceed to commit your changes in the IDE.
